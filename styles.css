@@ -1,0 +1,325 @@
+/* Navbar Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: black; /* Background same black rahega */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* PHA5E Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navbar Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Proper spacing */
+    margin-right: 30px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* FR/EN Underline */
+.language .underline {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text */
+    overflow-x: hidden;
+}
+
+/* Loading Animation */
+#loading-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.phase-text {
+    font-size: 48px;
+    font-weight: bold;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 3s forwards, fillText 1s 3s forwards;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillText {
+    to {
+        fill: #fff;
+        stroke: none;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    position: absolute;
+    width: 500px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.hero-image:nth-child(1) { animation-delay: 3s; }
+.hero-image:nth-child(2) { animation-delay: 4s; }
+.hero-image:nth-child(3) { animation-delay: 4.5s; }
+.hero-image:nth-child(4) { animation-delay: 5.5s; }
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.text-line {
+    font-size: 5em; /* Increased size */
+    font-weight: bold; /* Bold text */
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 0.5s forwards;
+}
+
+.text-line:nth-child(1) { animation-delay: 4s; }
+.text-line:nth-child(2) { animation-delay: 4.5s; }
+.text-line:nth-child(3) { animation-delay: 5s; }
+.text-line:nth-child(4) { animation-delay: 5.5s; }
+.text-line:nth-child(5) { animation-delay: 6s; }
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Vision Section */
+.vision-section {
+    text-align: center;
+    padding: 10%;
+    
+}
+
+.vision-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+
+.vision-heading {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.vision-text {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+}
+
+.see-more {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 16px;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.see-more-text {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+
+/* Skills Section */
+.skills-section {
+    text-align: center;
+    padding: 10%;
+}
+
+.skills-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+
+.skills-heading {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.skills-text {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+}
+
+.see-more {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 16px;
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.see-more-text {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/* Distinctions Section */
+.distinctions-section {
+    text-align: center;
+    padding: 10%;
+}
+
+.distinctions-title {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+
+.awards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.award-logo {
+    height: 80px;
+}
+
+.distinctions-text {
+    font-size: 16px;
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.hidden-text {
+    margin-top: 50px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.contact-section:hover .hidden-text {
+    opacity: 1;
+}
+
+.hidden-text span {
+    font-size: 3em;
+    font-weight: bold;
+}
